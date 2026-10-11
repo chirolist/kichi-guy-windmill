@@ -359,13 +359,18 @@ button {
 }
 
 .joystick {
+  --joystick-size: 118px;
   display: none;
   position: absolute;
   z-index: 4;
-  left: max(16px, env(safe-area-inset-left));
-  bottom: max(16px, env(safe-area-inset-bottom));
-  width: 118px;
-  height: 118px;
+  left: 50%;
+  top: min(
+    calc(50% + 64px),
+    calc(100% - var(--joystick-size) - max(12px, env(safe-area-inset-bottom)))
+  );
+  width: var(--joystick-size);
+  height: var(--joystick-size);
+  transform: translateX(-50%);
   touch-action: none;
 }
 
@@ -423,7 +428,6 @@ button {
   }
 
   .joystick {
-    width: 104px;
-    height: 104px;
+    --joystick-size: 104px;
   }
 }

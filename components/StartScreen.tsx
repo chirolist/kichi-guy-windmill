@@ -22,7 +22,7 @@ export function StartScreen({ difficulty, onDifficulty, onStart }: StartScreenPr
         </button>
         <div className="controls">
           <p className="hint-desktop">WASD / 矢印キーで移動（Escで一時停止）</p>
-          <p className="hint-mobile">左下のジョイスティックで移動</p>
+          <p className="hint-mobile">中央下のジョイスティックで移動</p>
         </div>
       </div>
     </div>
